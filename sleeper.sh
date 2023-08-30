@@ -3,24 +3,24 @@
 echo "First line of output"
 
 if [ -z "$SECRET_KEY" ]; then
-    echo "Missing SECRET_KEY"
+    >&2 echo "Missing SECRET_KEY"
     exit 1
 fi
 
 if [ -z "$SLEEP_TIME" ]; then
-    echo "Missing SLEEP_TIME"
+    >&2 echo "Missing SLEEP_TIME"
     exit 1
 fi
 
 if [ -z "$HOST_NAME" ]; then
-    echo "Missing HOST_NAME"
+    >&2 echo "Missing HOST_NAME"
     exit 1
 fi
 
 if [ "$SECRET_KEY" == "topsecretstring" ]; then
     echo "Provided correct SECRET_KEY"
 else
-    echo "The SECRET_KEY is wrong!"
+    >&2 echo "The SECRET_KEY is wrong!"
     exit 1
 fi
 
@@ -35,4 +35,3 @@ echo "Thank you!"
 >&2 echo "Thank you in STDERR as well!"
 
 exit 0
-
