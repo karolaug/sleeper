@@ -4,6 +4,7 @@ tokenkeeper.yaml
 .dockerignore
 .gitlab-ci.yml
 Dockerfile
+README.md
 
 # Git files.  Comment out or remove these if you intend to run git commands
 # against the project inside a Docker image.
